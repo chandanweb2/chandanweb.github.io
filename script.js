@@ -1,3 +1,3 @@
 function hello() {
-  alert("Button kaam kar raha hai 🎉");
+  alert("Thanks for visiting 😄");
 }
