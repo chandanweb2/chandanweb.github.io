@@ -4,27 +4,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #43cea2, #185a9d);
   font-family: Arial, sans-serif;
 }
 
 .card {
   background: white;
-  padding: 30px;
+  padding: 25px;
   border-radius: 12px;
+  width: 320px;
   text-align: center;
-  width: 300px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-h1 {
-  margin-bottom: 10px;
 }
 
 button {
   padding: 10px 20px;
   border: none;
-  background: #667eea;
+  background: #43cea2;
   color: white;
   font-size: 16px;
   border-radius: 6px;
@@ -32,5 +28,13 @@ button {
 }
 
 button:hover {
-  background: #5563c1;
+  background: #36b28d;
 }
+
+a {
+  display: block;
+  margin: 6px 0;
+  color: #185a9d;
+  text-decoration: none;
+  font-weight: bold;
+                               }
