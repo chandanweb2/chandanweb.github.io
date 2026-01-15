@@ -5,75 +5,82 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at top, #1b1b2f, #0f0f1a);
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  /* 🌸✨ Flowers + Stars dreamy background */
+  background: radial-gradient(circle at top,
+      rgba(255,255,255,0.15),
+      rgba(0,0,0,0.8)),
+    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+  background-size: cover;
+  background-position: center;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
 }
 
-/* Center wrapper */
-.wrapper {
+/* Dark glass overlay */
+.overlay {
   width: 100%;
-  padding: 20px;
+  min-height: 100vh;
+  background: rgba(0,0,0,0.45);
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-/* Glass card */
+/* Main card */
 .card {
   width: 100%;
-  max-width: 420px;
-  padding: 32px 26px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.08);
+  max-width: 520px;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.15);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-  text-align: center;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+  color: #fff;
 }
 
-/* Title */
+/* Headings */
 .card h1 {
-  font-size: 22px;
-  letter-spacing: 1.2px;
-  margin-bottom: 6px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
-/* Subtitle */
-.tagline {
-  font-size: 13px;
-  color: #b8b8c8;
-  margin-bottom: 26px;
-}
-
-/* Button */
-button {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 12px;
+.subtitle {
   font-size: 16px;
-  font-weight: 600;
+  color: #eee;
+  margin-bottom: 30px;
+}
+
+/* Trap button */
+.trap {
+  width: 100%;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
   cursor: pointer;
   color: #fff;
-  background: linear-gradient(135deg, #ff512f, #dd2476);
-  box-shadow: 0 10px 25px rgba(221,36,118,0.45);
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  box-shadow: 0 15px 30px rgba(255,75,43,0.5);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(221,36,118,0.65);
+.trap:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(255,75,43,0.7);
 }
 
-/* Truth text */
-#truth {
-  margin-top: 26px;
-  font-size: 16px;
+/* Result text */
+#result {
+  margin-top: 30px;
+  font-size: 20px;
   line-height: 1.5;
-  color: #f1f1f1;
   min-height: 60px;
-  opacity: 0.9;
 }
