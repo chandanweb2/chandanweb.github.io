@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Click & Help</title>
+  <title>Mini AI Chat</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="card">
-  <h1>Click & Surprise 🎉</h1>
-  <p id="output">Click the button to see magic 😄</p>
-  <button onclick="surprise()">Click Me</button>
+<div class="chat-box">
+  <div class="chat-header">🤖 Mini AI Chat</div>
 
-  <hr>
+  <div class="chat-body" id="chat">
+    <div class="message ai">Hi! Ask me something 🙂</div>
+  </div>
 
-  <h2>Local Help 🔗</h2>
-  <a href="https://www.india.gov.in" target="_blank">India Govt Portal</a>
-  <a href="https://uidai.gov.in" target="_blank">Aadhaar Services</a>
-  <a href="https://www.onlineservices.nsdl.com" target="_blank">PAN Services</a>
+  <div class="chat-input">
+    <input type="text" id="question" placeholder="Type your message">
+    <button onclick="askAI()">Send</button>
+  </div>
 </div>
 
 <script src="script.js"></script>
 </body>
-  </html>
+</html>
