@@ -1,17 +1,12 @@
-function askAI() {
-  const input = document.getElementById("question");
-  const chat = document.getElementById("chat");
+const backgrounds = [
+  "linear-gradient(135deg, #667eea, #764ba2)",
+  "linear-gradient(135deg, #43cea2, #185a9d)",
+  "linear-gradient(135deg, #ff512f, #dd2476)",
+  "linear-gradient(135deg, #2193b0, #6dd5ed)",
+  "linear-gradient(135deg, #cc2b5e, #753a88)"
+];
 
-  if (input.value.trim() === "") return;
-
-  // User message
-  chat.innerHTML += `<div class="message user">${input.value}</div>`;
-
-  // AI reply
-  setTimeout(() => {
-    chat.innerHTML += `<div class="message ai">I am learning, ask me more 😊</div>`;
-    chat.scrollTop = chat.scrollHeight;
-  }, 400);
-
-  input.value = "";
+function changeBackground() {
+  const random = Math.floor(Math.random() * backgrounds.length);
+  document.body.style.background = backgrounds[random];
 }
