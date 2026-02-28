@@ -88,6 +88,7 @@
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="#translator">Translator</a>
     </nav>
 </header>
 
@@ -125,6 +126,16 @@
         <p>Email: chandan22265712@gmail.com</p>
     </div>
 </section>
+    <section id="translator">
+    <h2>English to Hindi Translator 🌍</h2>
+    <div class="card">
+        <input type="text" id="inputText" placeholder="Enter English text"
+        style="padding:10px; width:80%;">
+        <br><br>
+        <button class="btn" onclick="translateText()">Translate</button>
+        <p id="outputText" style="margin-top:20px; font-size:18px;"></p>
+    </div>
+    </section>
 
 <footer>
     <p>© 2026 Chandan Kumar | All Rights Reserved</p>
@@ -134,6 +145,24 @@
     function showMessage(){
         alert("Thank you for visiting my website!");
     }
+    <script>
+function showMessage(){
+    alert("Thank you for visiting my website!");
+}
+
+async function translateText() {
+    let text = document.getElementById("inputText").value;
+
+    let response = await fetch(
+        "https://api.mymemory.translated.net/get?q=" 
+        + text + "&langpair=en|hi"
+    );
+
+    let data = await response.json();
+    document.getElementById("outputText").innerText =
+        data.responseData.translatedText;
+}
+</script>
 </script>
 
 </body>
