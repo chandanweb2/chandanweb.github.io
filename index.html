@@ -155,10 +155,11 @@ async function translateText() {
 
     let response = await fetch(
         "https://api.mymemory.translated.net/get?q=" 
-        + text + "&langpair=en|hi"
+        + encodeURIComponent(text) + "&langpair=en|hi"
     );
 
     let data = await response.json();
+
     document.getElementById("outputText").innerText =
         data.responseData.translatedText;
 }
