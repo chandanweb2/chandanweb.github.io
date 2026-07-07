@@ -2,164 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chandan | Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
-
-        body{
-            background:#0f172a;
-            color:white;
-            text-align:center;
-        }
-
-        header{
-            padding:20px;
-            background:#1e293b;
-            position:sticky;
-            top:0;
-        }
-
-        nav a{
-            color:white;
-            margin:0 15px;
-            text-decoration:none;
-            font-weight:bold;
-        }
-
-        nav a:hover{
-            color:#38bdf8;
-        }
-
-        section{
-            padding:80px 20px;
-        }
-
-        .hero{
-            background:linear-gradient(135deg,#0f172a,#1e293b);
-        }
-
-        .hero h1{
-            font-size:40px;
-        }
-
-        .btn{
-            margin-top:20px;
-            padding:10px 20px;
-            background:#38bdf8;
-            border:none;
-            border-radius:5px;
-            cursor:pointer;
-            font-weight:bold;
-        }
-
-        .btn:hover{
-            background:#0ea5e9;
-        }
-
-        .card{
-            background:#1e293b;
-            margin:20px auto;
-            padding:20px;
-            width:80%;
-            border-radius:10px;
-            box-shadow:0 0 15px rgba(0,0,0,0.5);
-        }
-
-        footer{
-            background:#1e293b;
-            padding:20px;
-        }
-    </style>
+    <title>Chandan Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+        <nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+    <header>
+        <h1>Chandan Kumar Mahato</h1>
+        <p>Computer Engineering Diploma</p>
+    </header>
 
-<header>
-    <h2>Chandan Kumar</h2>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="#translator">Translator</a>
-    </nav>
-</header>
-
-<section class="hero" id="home">
-    <h1>I am a Developer 🚀</h1>
-    <p>Diploma Computer Engineering | Python | C | Java</p>
-    <button class="btn" onclick="showMessage()">Hire Me</button>
-</section>
-
-<section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            I am passionate about coding and learning new technologies.
-            Currently preparing for government exams and improving my programming skills.
-        </p>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="card">
-        <h3>Game using Python</h3>
-        <p>Simple game project built using Python.</p>
-    </div>
-    <div class="card">
-        <h3>RRB Exam Preparation Website</h3>
-        <p>Created a website for railway exam aspirants.</p>
-    </div>
-</section>
-
-<section id="contact">
-    <h2>Contact Me</h2>
-    <div class="card">
-        <p>Email: chandan22265712@gmail.com</p>
-    </div>
-</section>
-    <section id="translator">
-    <h2>English to Hindi Translator 🌍</h2>
-    <div class="card">
-        <input type="text" id="inputText" placeholder="Enter English text"
-        style="padding:10px; width:80%;">
-        <br><br>
-        <button class="btn" onclick="translateText()">Translate</button>
-        <p id="outputText" style="margin-top:20px; font-size:18px;"></p>
-    </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am a Computer Engineering Diploma graduate. I am interested in Web Development and learning new technologies.</p>
     </section>
 
-<footer>
-    <p>© 2026 Chandan Kumar | All Rights Reserved</p>
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>10th - CBSE - 67%</li>
+            <li>12th - CBSE - 64%</li>
+            <li>Diploma in Computer Engineering</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Basic Python</li>
+        </ul>
+    </section>
+    <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: chandan22265712@gmail.com</p>
+    <p>Phone: +91 7982345915</p>
+    <a href="resume.pdf" download>
+    <button>Download Resume</button>
+</a>
+    <button onclick="showMessage()">Contact Me</button>
+    </sectio>
+    
+    
+        <!--Tab to edit-->
+    </\section>
+    <script src="script.js"></script>
+    <footer>
+    <p>© 2026 Chandan Kumar Mahato | All Rights Reserved</p>
 </footer>
-
-    <script>
-function showMessage(){
-    alert("Thank you for visiting my website!");
-}
-
-async function translateText() {
-    let text = document.getElementById("inputText").value;
-
-    let response = await fetch(
-        "https://api.mymemory.translated.net/get?q=" 
-        + encodeURIComponent(text) + "&langpair=en|hi"
-    );
-
-    let data = await response.json();
-
-    document.getElementById("outputText").innerText =
-        data.responseData.translatedText;
-}
-</script>
-
 </body>
-  </html>
+    </html>
