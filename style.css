@@ -1,86 +1,107 @@
-* {
-  box-sizing: border-box;
+  /* General */
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    margin:0;
+    padding:0;
+    text-align:center;
 }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: "Segoe UI", Arial, sans-serif;
-
-  /* 🌸✨ Flowers + Stars dreamy background */
-  background: radial-gradient(circle at top,
-      rgba(255,255,255,0.15),
-      rgba(0,0,0,0.8)),
-    url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
-  background-size: cover;
-  background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Navigation */
+nav{
+    background:#222;
+    padding:15px;
 }
 
-/* Dark glass overlay */
-.overlay {
-  width: 100%;
-  min-height: 100vh;
-  background: rgba(0,0,0,0.45);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+    font-size:18px;
 }
 
-/* Main card */
-.card {
-  width: 100%;
-  max-width: 520px;
-  padding: 40px 30px;
-  text-align: center;
-  border-radius: 22px;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-  color: #fff;
+nav a:hover{
+    color:yellow;
 }
 
-/* Headings */
-.card h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
+/* Header */
+header{
+    background:#0077b5;
+    color:white;
+    padding:30px;
 }
 
-.subtitle {
-  font-size: 16px;
-  color: #eee;
-  margin-bottom: 30px;
+/* Profile Image */
+img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:4px solid white;
+    margin-top:15px;
 }
 
-/* Trap button */
-.trap {
-  width: 100%;
-  padding: 18px;
-  font-size: 20px;
-  font-weight: bold;
-  border: none;
-  border-radius: 14px;
-  cursor: pointer;
-  color: #fff;
-  background: linear-gradient(135deg, #ff416c, #ff4b2b);
-  box-shadow: 0 15px 30px rgba(255,75,43,0.5);
-  transition: transform 0.2s, box-shadow 0.2s;
+/* Sections */
+section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
 }
 
-.trap:hover {
-  transform: scale(1.03);
-  box-shadow: 0 20px 40px rgba(255,75,43,0.7);
+/* Lists */
+ul{
+    list-style:none;
+    padding:0;
 }
 
-/* Result text */
-#result {
-  margin-top: 30px;
-  font-size: 20px;
-  line-height: 1.5;
-  min-height: 60px;
+li{
+    padding:8px;
+    font-size:18px;
 }
+
+/* Buttons */
+button{
+    background:#0077b5;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    font-size:16px;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+button:hover{
+    background:#005f8d;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* Responsive Design */
+@media(max-width:600px){
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    section{
+        margin:10px;
+    }
+
+    header{
+        padding:20px;
+    }
+
+    button{
+        width:90%;
+    }
+  }
